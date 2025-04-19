@@ -14,8 +14,9 @@ def main():
         if weather_response.status_code == 200:
                 weather_data = weather_response.json()
 
-                output = "Температура: {temp}°C, {desc}, скорость ветра: {wind} м/c, влажность: {humi}%, давление: {pres} гПа".format(
+                output = "Температура: {temp}°C, ощущается как {feel}°C, {desc}, скорость ветра: {wind} м/c, влажность: {humi}%, давление: {pres} гПа".format(
                         temp=weather_data["temperature"],
+                        feel=weather_data["feels_like"],
                         desc=weather_data["weather"],
                         wind=weather_data["wind"],
                         humi=weather_data["humidity"],

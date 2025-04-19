@@ -30,6 +30,7 @@ def get_weather():
                 weather_json = {
                  "city": weather_data["name"],
                  "temperature": weather_data["main"]["temp"],
+                 "feels_like": weather_data["main"]["feels_like"],
                  "weather": weather_data["weather"][0]["description"],
                  "wind": weather_data["wind"]["speed"],
                  "humidity": weather_data["main"]["humidity"],
